@@ -33,144 +33,95 @@
     </nav>
   </header>
 
-  <section class="complete-hero">
-    <div class="container">
-      <div class="confetti-animation">
-        <i class="fas fa-shipping-fast animated"></i>
-        <div class="confetti"></div>
+  <main class="container">
+    <section class="booking-section">
+      <div class="header-content">
+        <h1>您的艙位已預定 <i class="fas fa-check-circle"></i></h1>
+        <p class="lead">感謝您選擇 ShipMe™！我們已經收到您的預訂，您很快就會收到確認郵件。</p>
       </div>
-      <h1>恭喜！你已成功預約愚人節特別行程！</h1>
-      <p class="tagline">你即將成為 ShipMe™ 的第 <span class="counter">1,337</span> 位幸運貨物！</p>
-    </div>
-  </section>
 
-  <section class="booking-summary">
-    <div class="container">
-      <div class="summary-card">
-        <div class="summary-header">
-          <h2><i class="fas fa-clipboard-check"></i> 訂單詳情</h2>
-          <span class="booking-id">訂單號碼：AF-20250401-<span id="random-id">XYZ</span></span>
-        </div>
+      <div class="booking-summary">
+        <h3>預訂摘要 <i class="fas fa-clipboard-list"></i></h3>
         
-        <div class="summary-body">
-          <div class="summary-section">
-            <h3>你的艙型</h3>
-            <div class="cabin-summary" id="cabin-display">
-              <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=400&auto=format&fit=crop" alt="Standard Pod" />
-              <div class="cabin-info">
-                <h4>Standard Pod</h4>
-                <p>$129 起</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="summary-section">
-            <h3>你的行程</h3>
-            <div class="route-summary">
-              <div class="route-point">
-                <i class="fas fa-map-marker-alt"></i>
-                <div class="location">
-                  <h4>出發地</h4>
-                  <p id="origin-display">台北</p>
-                </div>
-              </div>
-              <div class="route-line">
-                <i class="fas fa-ship"></i>
-              </div>
-              <div class="route-point">
-                <i class="fas fa-flag-checkered"></i>
-                <div class="location">
-                  <h4>目的地</h4>
-                  <p id="destination-display">紐約</p>
-                </div>
-              </div>
-            </div>
-            <div class="shipping-details">
-              <div class="shipping-method">
-                <h4>運送方式</h4>
-                <p id="shipping-method-display">海運 (14-30 天)</p>
-              </div>
-              <div class="departure-date">
-                <h4>出發日期</h4>
-                <p id="departure-date-display">2025 年 4 月 1 日</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="summary-section">
-            <h3>你的行李艙位</h3>
-            <div class="cargo-info">
-              <div class="cargo-detail">
-                <i class="fas fa-box"></i>
-                <span>貨物分類：</span>
-                <strong>人類貨物（特殊處理）</strong>
-              </div>
-              <div class="cargo-detail">
-                <i class="fas fa-barcode"></i>
-                <span>貨運追蹤碼：</span>
-                <strong id="tracking-code">HUMN-20250401-<span id="random-track">12345</span></strong>
-              </div>
-              <div class="cargo-detail">
-                <i class="fas fa-tag"></i>
-                <span>特殊標記：</span>
-                <strong>易碎品、保持乾燥、此面朝上</strong>
-              </div>
-            </div>
+        <div class="summary-item">
+          <i class="fas fa-box"></i>
+          <div class="item-details">
+            <span class="label">艙位類型</span>
+            <span class="value">標準艙</span>
           </div>
         </div>
         
-        <div class="april-fools-reveal">
-          <div class="reveal-banner">
-            <i class="fas fa-laugh-squint"></i>
-            <h3>愚人節快樂！</h3>
-            <i class="fas fa-laugh-squint"></i>
-          </div>
-          <p>這是一個愚人節惡搞網站，人類目前還不能被當成貨物運送（感謝老天）。</p>
-          <p>如果你真的想出國旅行，建議你還是乖乖買機票、訂飯店，或者考慮其他實際存在的交通方式。</p>
-          <p>別擔心，我們沒有記錄你的任何個人資料。網站所有表單都是靜態的，沒有後端系統。</p>
-          <div class="share-section">
-            <p>喜歡這個概念嗎？分享給你的朋友，讓他們也體驗一下被「寄送」的感覺！</p>
-            <div class="social-share">
-              <a href="#" class="share-btn"><i class="fab fa-facebook"></i> 分享</a>
-              <a href="#" class="share-btn"><i class="fab fa-twitter"></i> 推文</a>
-              <a href="#" class="share-btn"><i class="fab fa-line"></i> LINE</a>
-            </div>
+        <div class="summary-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="item-details">
+            <span class="label">始發地</span>
+            <span class="value">香港</span>
           </div>
         </div>
         
-        <div class="summary-footer">
-          <a href="index.html" class="btn btn-secondary">返回首頁</a>
-          <a href="#" class="btn btn-primary" id="download-btn">下載訂單確認函</a>
+        <div class="summary-item">
+          <i class="fas fa-plane-arrival"></i>
+          <div class="item-details">
+            <span class="label">目的地</span>
+            <span class="value">台北</span>
+          </div>
+        </div>
+        
+        <div class="summary-item">
+          <i class="fas fa-calendar-alt"></i>
+          <div class="item-details">
+            <span class="label">發貨日期</span>
+            <span class="value">2023年4月1日</span>
+          </div>
+        </div>
+        
+        <div class="important-checkbox">
+          <p><i class="fas fa-exclamation-triangle"></i> <strong>重要說明</strong>：請在裝運前24小時確保您準備好了。我們建議您避免吃太多食物，並穿著舒適的衣服。</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="fake-recommendations">
-    <div class="container">
-      <h2>其他人也預訂了這些</h2>
-      <div class="fake-products">
-        <div class="fake-product">
-          <img src="https://images.unsplash.com/photo-1595079676339-1534801ad6cf?q=80&w=300&auto=format&fit=crop" alt="寵物運送服務" />
-          <h3>CatGo™ 寵物運送服務</h3>
-          <p>讓你的貓咪也享受貨運旅行的樂趣</p>
-          <a href="#" class="btn btn-outline disabled">即將推出</a>
+      
+      <div class="tracking-section">
+        <h2>您的追蹤號碼</h2>
+        <div class="tracking-number">
+          <span>SHIP-HK23-45678-TPE</span>
+          <button class="btn btn-secondary btn-sm copy-btn" onclick="alert('追蹤號碼已複製')">
+            <i class="fas fa-copy"></i> 複製
+          </button>
         </div>
-        <div class="fake-product">
-          <img src="https://images.unsplash.com/photo-1595079676077-d129b3d15796?q=80&w=300&auto=format&fit=crop" alt="豪華家具運送" />
-          <h3>攜帶式豪華家具套組</h3>
-          <p>讓你的貨櫃感覺就像家一樣</p>
-          <a href="#" class="btn btn-outline disabled">缺貨中</a>
-        </div>
-        <div class="fake-product">
-          <img src="https://images.unsplash.com/photo-1582845512747-e42001c95638?q=80&w=300&auto=format&fit=crop" alt="高級餐點服務" />
-          <h3>貨運艙高級餐點服務</h3>
-          <p>在貨櫃中享用米其林星級料理</p>
-          <a href="#" class="btn btn-outline disabled">即將推出</a>
-        </div>
+        <p>您可以使用此號碼在我們的網站上追蹤您自己的運輸進度。</p>
       </div>
-    </div>
-  </section>
+      
+      <div class="joke-reveal trust-badge">
+        <h2><i class="fas fa-laugh-wink"></i> 愚人節快樂！</h2>
+        <p>ShipMe™ 是一個愚人節的玩笑網站。顯然，我們不會真的把人像貨物一樣運送！</p>
+        <p>謝謝您玩得開心，希望這能讓您微笑 <i class="fas fa-heart"></i></p>
+        <p>
+          <a href="index.html" class="btn btn-primary">返回首頁</a>
+          <a href="#" class="btn btn-secondary" onclick="window.print(); return false;">
+            <i class="fas fa-print"></i> 列印收據（給朋友開個玩笑）
+          </a>
+        </p>
+      </div>
+    </section>
+    
+    <aside class="joke-social">
+      <h3>分享這個玩笑</h3>
+      <div class="social-links">
+        <a href="#" class="social-btn" onclick="alert('分享到 Facebook！'); return false;">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-btn" onclick="alert('分享到 Twitter！'); return false;">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-btn" onclick="alert('分享到 WhatsApp！'); return false;">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" class="social-btn" onclick="alert('分享到 Instagram！'); return false;">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </aside>
+  </main>
 
   <footer>
     <div class="container">

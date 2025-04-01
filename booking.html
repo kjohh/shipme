@@ -36,7 +36,7 @@
   <section class="booking-header">
     <div class="container">
       <h1>預約你的貨運旅程</h1>
-      <p>只需三個簡單步驟，開啟你的沉浸式旅行</p>
+      <p>只需兩個簡單步驟，開啟你的沉浸式旅行</p>
     </div>
   </section>
 
@@ -50,33 +50,55 @@
         <div class="step-line"></div>
         <div class="step-indicator" id="step-2-indicator">
           <div class="step-number">2</div>
-          <div class="step-label">選擇目的地</div>
-        </div>
-        <div class="step-line"></div>
-        <div class="step-indicator" id="step-3-indicator">
-          <div class="step-number">3</div>
-          <div class="step-label">個人資料</div>
+          <div class="step-label">旅行細節</div>
         </div>
       </div>
 
       <div class="booking-forms">
-        <!-- 步驟 1: 選擇艙型 -->
+        <!-- 步驟 1: 選擇艙型與體型資料 -->
         <div class="booking-form active" id="step-1">
           <h2>選擇你的艙型</h2>
           <p>根據你的預算和舒適需求，選擇最適合你的人類運輸艙</p>
+          
+          <div class="physical-info">
+            <h3><i class="fas fa-ruler-combined"></i> 你的體型資料</h3>
+            <p class="info-text">我們需要了解你的基本體型，以確保能為你提供最合適的艙體空間。</p>
+            
+            <div class="physical-form">
+              <div class="form-group">
+                <label for="height">身高 (cm)</label>
+                <input type="number" id="height" placeholder="確保艙體適合你的高度" min="120" max="200" required>
+                <p class="range-info">可接受範圍：120-200 cm</p>
+              </div>
+              
+              <div class="form-group">
+                <label for="weight">體重 (kg)</label>
+                <input type="number" id="weight" placeholder="運費會根據重量計算" min="30" max="150" required>
+                <p class="range-info">可接受範圍：30-150 kg</p>
+              </div>
+            </div>
+            
+            <div class="cabin-recommendation">
+              <p class="recommendation-text">根據你的體型，我們推薦：<span id="recommended-cabin">請輸入身高體重</span></p>
+            </div>
+          </div>
           
           <div class="cabin-selection">
             <div class="cabin-option" data-cabin="mini">
               <div class="cabin-image">
                 <img src="https://images.unsplash.com/photo-1520277739336-7bf67edfa768?q=80&w=800&auto=format&fit=crop" alt="Mini Box" />
+                <div class="cabin-size-indicator">
+                  <span>60 x 100 x 60 cm</span>
+                </div>
               </div>
               <div class="cabin-details">
                 <h3>Mini Box</h3>
                 <p class="price">$49 起</p>
                 <ul class="features">
-                  <li><i class="fas fa-box"></i> 空間與大型貓籠相仿</li>
+                  <li><i class="fas fa-box"></i> 空間與大型貓籠相仿，適合蜷曲小睡</li>
                   <li><i class="fas fa-water"></i> 附送塑膠水瓶與能量棒</li>
                   <li><i class="fas fa-book"></i> 隨機紙本書一本</li>
+                  <li><i class="fas fa-user-alt-slash"></i> 適合身高 < 165cm、體重 < 60kg 的旅客</li>
                 </ul>
                 <div class="cabin-option-select">
                   <input type="radio" name="cabin-type" id="cabin-mini" value="mini">
@@ -89,14 +111,18 @@
               <div class="recommended-tag">推薦</div>
               <div class="cabin-image">
                 <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800&auto=format&fit=crop" alt="Standard Pod" />
+                <div class="cabin-size-indicator">
+                  <span>80 x 200 x 80 cm</span>
+                </div>
               </div>
               <div class="cabin-details">
                 <h3>Standard Pod</h3>
                 <p class="price">$129 起</p>
                 <ul class="features">
-                  <li><i class="fas fa-bed"></i> Le平躺空間，附床墊與薄被</li>
+                  <li><i class="fas fa-bed"></i> 平躺空間，附床墊與薄被</li>
                   <li><i class="fas fa-fan"></i> 基本冷氣與簡易空氣循環</li>
                   <li><i class="fas fa-tv"></i> 10 吋螢幕與串流服務</li>
+                  <li><i class="fas fa-user"></i> 適合身高 < 190cm、體重 < 100kg 的旅客</li>
                 </ul>
                 <div class="cabin-option-select">
                   <input type="radio" name="cabin-type" id="cabin-standard" value="standard" checked>
@@ -108,6 +134,9 @@
             <div class="cabin-option" data-cabin="luxury">
               <div class="cabin-image">
                 <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800&auto=format&fit=crop" alt="Luxury Suite" />
+                <div class="cabin-size-indicator">
+                  <span>100 x 210 x 100 cm</span>
+                </div>
               </div>
               <div class="cabin-details">
                 <h3>Luxury Suite</h3>
@@ -116,6 +145,7 @@
                   <li><i class="fas fa-couch"></i> 完全平躺艙＋LED 燈光調節</li>
                   <li><i class="fas fa-headphones"></i> 頂級靜音耳罩、按摩功能</li>
                   <li><i class="fas fa-robot"></i> ChatGPT Plus 與 Spotify Premium</li>
+                  <li><i class="fas fa-users"></i> 適合身高 < 200cm、體重 < 150kg 的旅客</li>
                 </ul>
                 <div class="cabin-option-select">
                   <input type="radio" name="cabin-type" id="cabin-luxury" value="luxury">
@@ -127,120 +157,117 @@
           
           <div class="form-navigation">
             <button class="btn btn-secondary" onclick="window.location.href='index.html'">返回首頁</button>
-            <button class="btn btn-primary next-step" data-next="step-2">下一步：選擇目的地</button>
+            <button class="btn btn-primary next-step" data-next="step-2">下一步：旅行細節</button>
           </div>
         </div>
         
-        <!-- 步驟 2: 選擇目的地 -->
+        <!-- 步驟 2: 旅行細節與表單完成 -->
         <div class="booking-form" id="step-2">
-          <h2>選擇你的目的地與運輸方式</h2>
+          <h2>填寫旅行細節</h2>
           <p>告訴我們你想被寄送到哪裡，以及你偏好的運輸方式</p>
           
-          <div class="destination-form">
-            <div class="form-group">
-              <label for="origin">出發地</label>
-              <select id="origin" required>
-                <option value="" disabled selected>請選擇出發地</option>
-                <option value="taipei">台北</option>
-                <option value="kaohsiung">高雄</option>
-                <option value="hong_kong">香港</option>
-                <option value="tokyo">東京</option>
-                <option value="singapore">新加坡</option>
-              </select>
-            </div>
-            
-            <div class="form-group">
-              <label for="destination">目的地</label>
-              <select id="destination" required>
-                <option value="" disabled selected>請選擇目的地</option>
-                <option value="new_york">紐約</option>
-                <option value="london">倫敦</option>
-                <option value="paris">巴黎</option>
-                <option value="sydney">雪梨</option>
-                <option value="dubai">杜拜</option>
-                <option value="bangkok">曼谷</option>
-              </select>
-            </div>
-            
-            <div class="form-group">
-              <label>運輸方式</label>
-              <div class="shipping-options">
-                <div class="shipping-option">
-                  <input type="radio" name="shipping-method" id="shipping-sea" value="sea" checked>
-                  <label for="shipping-sea"><i class="fas fa-ship"></i> 海運 (14-30 天)</label>
-                  <p class="shipping-description">最環保、最安靜的選擇。十分適合社恐族。</p>
+          <div class="travel-details">
+            <div class="detail-columns">
+              <div class="detail-column">
+                <div class="form-group">
+                  <label for="fullname">全名</label>
+                  <input type="text" id="fullname" placeholder="請輸入你的全名" required>
                 </div>
                 
-                <div class="shipping-option">
-                  <input type="radio" name="shipping-method" id="shipping-land" value="land">
-                  <label for="shipping-land"><i class="fas fa-truck"></i> 陸運 (7-15 天)</label>
-                  <p class="shipping-description">平穩的路途，中等運送時間。</p>
+                <div class="form-group">
+                  <label for="email">電子郵件</label>
+                  <input type="email" id="email" placeholder="example@email.com" required>
                 </div>
                 
-                <div class="shipping-option">
-                  <input type="radio" name="shipping-method" id="shipping-air" value="air">
-                  <label for="shipping-air"><i class="fas fa-plane"></i> 空運 (2-4 天)</label>
-                  <p class="shipping-description">最快的選擇，但較為顛簸且較貴。</p>
+                <div class="form-group">
+                  <label for="phone">手機號碼</label>
+                  <input type="tel" id="phone" placeholder="0912345678" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="origin">出發地</label>
+                  <select id="origin" required>
+                    <option value="" disabled selected>請選擇出發地</option>
+                    <option value="taipei">台北</option>
+                    <option value="kaohsiung">高雄</option>
+                    <option value="hong_kong">香港</option>
+                    <option value="tokyo">東京</option>
+                    <option value="singapore">新加坡</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="detail-column">
+                <div class="form-group">
+                  <label for="destination">目的地</label>
+                  <select id="destination" required>
+                    <option value="" disabled selected>請選擇目的地</option>
+                    <option value="new_york">紐約</option>
+                    <option value="london">倫敦</option>
+                    <option value="paris">巴黎</option>
+                    <option value="sydney">雪梨</option>
+                    <option value="dubai">杜拜</option>
+                    <option value="bangkok">曼谷</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label>運輸方式</label>
+                  <div class="shipping-options">
+                    <div class="shipping-option">
+                      <input type="radio" name="shipping-method" id="shipping-sea" value="sea" checked>
+                      <label for="shipping-sea"><i class="fas fa-ship"></i> 海運 (14-30 天)</label>
+                      <p class="shipping-description">最環保、最安靜的選擇。十分適合社恐族。</p>
+                    </div>
+                    
+                    <div class="shipping-option">
+                      <input type="radio" name="shipping-method" id="shipping-land" value="land">
+                      <label for="shipping-land"><i class="fas fa-truck"></i> 陸運 (7-15 天)</label>
+                      <p class="shipping-description">平穩的路途，中等運送時間。</p>
+                    </div>
+                    
+                    <div class="shipping-option">
+                      <input type="radio" name="shipping-method" id="shipping-air" value="air">
+                      <label for="shipping-air"><i class="fas fa-plane"></i> 空運 (2-4 天)</label>
+                      <p class="shipping-description">最快的選擇，但較為顛簸且較貴。</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="departure-date">出發日期</label>
+                  <input type="date" id="departure-date" required min="2025-04-01">
                 </div>
               </div>
             </div>
             
-            <div class="form-group">
-              <label for="departure-date">出發日期</label>
-              <input type="date" id="departure-date" required min="2025-04-01">
+            <div class="form-group checkbox-group important-checkbox">
+              <input type="checkbox" id="acknowledgment" required>
+              <label for="acknowledgment">我確認這是愚人節惡搞網站，人類無法真的被當貨物寄送（但如果可以的話，我很想試試）</label>
+            </div>
+          </div>
+          
+          <div class="booking-summary">
+            <h3>預約摘要</h3>
+            <div class="summary-item selected-cabin">
+              <i class="fas fa-box-open"></i>
+              <div class="item-details">
+                <span class="label">選擇艙型</span>
+                <span class="value" id="summary-cabin">Standard Pod</span>
+              </div>
+            </div>
+            
+            <div class="summary-item body-info">
+              <i class="fas fa-ruler"></i>
+              <div class="item-details">
+                <span class="label">體型資料</span>
+                <span class="value" id="summary-body">尚未填寫</span>
+              </div>
             </div>
           </div>
           
           <div class="form-navigation">
             <button class="btn btn-secondary prev-step" data-prev="step-1">返回上一步</button>
-            <button class="btn btn-primary next-step" data-next="step-3">下一步：個人資料</button>
-          </div>
-        </div>
-        
-        <!-- 步驟 3: 個人資料 -->
-        <div class="booking-form" id="step-3">
-          <h2>填寫個人資料</h2>
-          <p>我們需要一些基本資料來安排你的貨運</p>
-          
-          <div class="personal-form">
-            <div class="form-group">
-              <label for="fullname">全名</label>
-              <input type="text" id="fullname" placeholder="請輸入你的全名" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="email">電子郵件</label>
-              <input type="email" id="email" placeholder="example@email.com" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="phone">手機號碼</label>
-              <input type="tel" id="phone" placeholder="0912345678" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="weight">體重 (kg)</label>
-              <input type="number" id="weight" placeholder="運費會根據重量計算" min="30" max="150" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="height">身高 (cm)</label>
-              <input type="number" id="height" placeholder="確保艙體適合你" min="120" max="200" required>
-            </div>
-            
-            <div class="form-group checkbox-group">
-              <input type="checkbox" id="terms" required>
-              <label for="terms">我已閱讀並同意 ShipMe™ 的<a href="#">服務條款</a>與<a href="#">隱私政策</a></label>
-            </div>
-            
-            <div class="form-group checkbox-group">
-              <input type="checkbox" id="acknowledgment" required>
-              <label for="acknowledgment">我確認這是愚人節惡搞網站，人類無法真的被當貨物寄送</label>
-            </div>
-          </div>
-          
-          <div class="form-navigation">
-            <button class="btn btn-secondary prev-step" data-prev="step-2">返回上一步</button>
             <button class="btn btn-primary" id="submit-booking">完成預約</button>
           </div>
         </div>
@@ -310,25 +337,35 @@
       if (cabinParam) {
         const cabinRadio = document.getElementById('cabin-' + cabinParam);
         if (cabinRadio) cabinRadio.checked = true;
+        updateSummary();
       }
       
       // 下一步按鈕
       const nextButtons = document.querySelectorAll('.next-step');
       nextButtons.forEach(button => {
         button.addEventListener('click', function() {
-          const currentStep = button.closest('.booking-form');
-          const nextStepId = button.getAttribute('data-next');
-          const nextStep = document.getElementById(nextStepId);
-          
-          currentStep.classList.remove('active');
-          nextStep.classList.add('active');
-          
-          // 更新步驟指示器
-          document.getElementById(currentStep.id + '-indicator').classList.remove('active');
-          document.getElementById(nextStepId + '-indicator').classList.add('active');
-          
-          // 滾動到頂部
-          window.scrollTo(0, 0);
+          // 檢查當前步驟是否填寫完整
+          if (validateCurrentStep(this)) {
+            const currentStep = button.closest('.booking-form');
+            const nextStepId = button.getAttribute('data-next');
+            const nextStep = document.getElementById(nextStepId);
+            
+            currentStep.classList.remove('active');
+            nextStep.classList.add('active');
+            
+            // 更新步驟指示器
+            document.getElementById(currentStep.id + '-indicator').classList.remove('active');
+            document.getElementById(nextStepId + '-indicator').classList.add('active');
+            
+            // 更新摘要資訊
+            updateSummary();
+            
+            // 平滑滾動到頂部
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          }
         });
       });
       
@@ -347,15 +384,115 @@
           document.getElementById(currentStep.id + '-indicator').classList.remove('active');
           document.getElementById(prevStepId + '-indicator').classList.add('active');
           
-          // 滾動到頂部
-          window.scrollTo(0, 0);
+          // 平滑滾動到頂部
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         });
       });
       
+      // 身高體重推薦
+      const heightInput = document.getElementById('height');
+      const weightInput = document.getElementById('weight');
+      
+      function updateRecommendation() {
+        const height = parseInt(heightInput.value) || 0;
+        const weight = parseInt(weightInput.value) || 0;
+        
+        let recommendation = '請輸入身高體重';
+        
+        if (height > 0 && weight > 0) {
+          if (height < 165 && weight < 60) {
+            recommendation = '<span class="mini">Mini Box</span> (最省錢選擇)';
+            document.getElementById('cabin-mini').checked = true;
+          } else if (height < 190 && weight < 100) {
+            recommendation = '<span class="standard">Standard Pod</span> (最熱門選擇)';
+            document.getElementById('cabin-standard').checked = true;
+          } else {
+            recommendation = '<span class="luxury">Luxury Suite</span> (最舒適選擇)';
+            document.getElementById('cabin-luxury').checked = true;
+          }
+          
+          // 添加趣味動畫效果
+          document.querySelector('.cabin-recommendation').classList.add('pulse-animation');
+          setTimeout(() => {
+            document.querySelector('.cabin-recommendation').classList.remove('pulse-animation');
+          }, 1000);
+        }
+        
+        document.getElementById('recommended-cabin').innerHTML = recommendation;
+        
+        // 身體數據摘要更新
+        if (height > 0 && weight > 0) {
+          document.getElementById('summary-body').textContent = `${height} cm, ${weight} kg`;
+        }
+      }
+      
+      heightInput.addEventListener('input', updateRecommendation);
+      weightInput.addEventListener('input', updateRecommendation);
+      
+      // 艙型選擇變更
+      const cabinRadios = document.querySelectorAll('input[name="cabin-type"]');
+      cabinRadios.forEach(radio => {
+        radio.addEventListener('change', updateSummary);
+      });
+      
+      // 更新摘要資訊
+      function updateSummary() {
+        const selectedCabin = document.querySelector('input[name="cabin-type"]:checked');
+        if (selectedCabin) {
+          let cabinName = '';
+          if (selectedCabin.value === 'mini') {
+            cabinName = 'Mini Box ($49 起)';
+          } else if (selectedCabin.value === 'standard') {
+            cabinName = 'Standard Pod ($129 起)';
+          } else if (selectedCabin.value === 'luxury') {
+            cabinName = 'Luxury Suite ($299 起)';
+          }
+          document.getElementById('summary-cabin').textContent = cabinName;
+        }
+      }
+      
+      // 驗證當前步驟
+      function validateCurrentStep(button) {
+        const currentStep = button.closest('.booking-form');
+        const stepId = currentStep.id;
+        
+        if (stepId === 'step-1') {
+          const height = parseInt(heightInput.value) || 0;
+          const weight = parseInt(weightInput.value) || 0;
+          
+          if (height < 120 || height > 200 || weight < 30 || weight > 150) {
+            alert('請輸入有效的身高（120-200 cm）和體重（30-150 kg）');
+            return false;
+          }
+          
+          // 添加艙型體型相容性的趣味檢查
+          const selectedCabin = document.querySelector('input[name="cabin-type"]:checked').value;
+          
+          if (selectedCabin === 'mini' && (height > 165 || weight > 60)) {
+            if (confirm('你的身高或體重可能超出 Mini Box 的設計限制。你確定不會感到太擠嗎？')) {
+              return true;
+            } else {
+              return false;
+            }
+          } else if (selectedCabin === 'standard' && (height > 190 || weight > 100)) {
+            if (confirm('你的身高或體重可能超出 Standard Pod 的設計限制。要不要考慮升級到 Luxury Suite？')) {
+              return true;
+            } else {
+              return false;
+            }
+          }
+        }
+        
+        return true;
+      }
+      
       // 提交按鈕
       document.getElementById('submit-booking').addEventListener('click', function() {
-        // 檢查表單有效性（簡單版）
-        const requiredFields = document.querySelectorAll('#step-3 input[required]');
+        // 檢查表單有效性
+        const requiredFields = document.querySelectorAll('#step-2 input[required], #step-2 select[required]');
         let isValid = true;
         
         requiredFields.forEach(field => {
@@ -368,10 +505,39 @@
         });
         
         if (isValid) {
-          window.location.href = 'booking-complete.html';
+          // 帶參數跳轉到完成頁面
+          const selectedCabin = document.querySelector('input[name="cabin-type"]:checked').value;
+          const origin = document.getElementById('origin').value;
+          const destination = document.getElementById('destination').value;
+          const shippingMethod = document.querySelector('input[name="shipping-method"]:checked').value;
+          
+          window.location.href = `booking-complete.html?cabin=${selectedCabin}&origin=${origin}&destination=${destination}&shipping=${shippingMethod}`;
         } else {
           alert('請填寫所有必要欄位');
         }
+      });
+      
+      // 初始化摘要
+      updateSummary();
+      
+      // 添加艙型卡片懸停 3D 效果
+      const cabinCards = document.querySelectorAll('.cabin-option');
+      
+      cabinCards.forEach(card => {
+        card.addEventListener('mousemove', function(e) {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          
+          const xRotation = ((y - rect.height / 2) / rect.height) * 10;
+          const yRotation = ((x - rect.width / 2) / rect.width) * -10;
+          
+          card.style.transform = `perspective(1000px) rotateX(${xRotation}deg) rotateY(${yRotation}deg) scale(1.05)`;
+        });
+        
+        card.addEventListener('mouseout', function() {
+          card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+        });
       });
     });
   </script>

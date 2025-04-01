@@ -41,9 +41,26 @@
           <a href="booking.html" class="btn btn-primary">立即預約</a>
           <a href="#how-it-works" class="btn btn-secondary">了解更多</a>
         </div>
+        <div class="trust-badges">
+          <div class="trust-badge">
+            <i class="fas fa-award"></i>
+            <span>保證安全運送</span>
+          </div>
+          <div class="trust-badge">
+            <i class="fas fa-leaf"></i>
+            <span>碳中和物流</span>
+          </div>
+          <div class="trust-badge">
+            <i class="fas fa-shield-alt"></i>
+            <span>100%人道運輸</span>
+          </div>
+        </div>
       </div>
       <div class="hero-image">
-        <img src="assets/hero-image.png" alt="貨運艙體概念圖" />
+        <div class="image-container">
+          <img src="assets/hero-image.png" alt="貨運艙體概念圖" />
+          <div class="floating-tag">限時促銷</div>
+        </div>
       </div>
     </div>
   </section>
@@ -129,48 +146,51 @@
         <p>為各類旅客打造的三種專屬空間</p>
       </div>
       <div class="cabin-cards">
-        <div class="cabin-card">
+        <div class="cabin-card" data-cabin="mini">
           <div class="cabin-image">
             <img src="https://images.unsplash.com/photo-1520277739336-7bf67edfa768?q=80&w=800&auto=format&fit=crop" alt="Mini Box" />
+            <div class="cabin-size-indicator">適合 ≤ 165cm</div>
           </div>
           <div class="cabin-content">
             <h3>Mini Box</h3>
             <p class="price">$49 起</p>
             <ul class="features-list">
-              <li>空間與大型貓籠相仿，適合蜷曲小睡</li>
-              <li>附送塑膠水瓶與能量棒</li>
-              <li>無 Wi-Fi，有紙本書一本（隨機）</li>
+              <li><i class="fas fa-check-circle"></i> 空間與大型貓籠相仿，適合蜷曲小睡</li>
+              <li><i class="fas fa-check-circle"></i> 附送塑膠水瓶與能量棒</li>
+              <li><i class="fas fa-check-circle"></i> 無 Wi-Fi，有紙本書一本（隨機）</li>
             </ul>
             <a href="booking.html?cabin=mini" class="btn btn-outline">選擇 Mini Box</a>
           </div>
         </div>
-        <div class="cabin-card featured">
+        <div class="cabin-card featured" data-cabin="standard">
           <div class="popular-tag">最受歡迎</div>
           <div class="cabin-image">
             <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800&auto=format&fit=crop" alt="Standard Pod" />
+            <div class="cabin-size-indicator">適合 ≤ 185cm</div>
           </div>
           <div class="cabin-content">
             <h3>Standard Pod</h3>
             <p class="price">$129 起</p>
             <ul class="features-list">
-              <li>可躺平，有床墊與薄被</li>
-              <li>基本冷氣與簡易空氣循環</li>
-              <li>配備 10 吋螢幕與內建串流服務（Netflix & Disney+）</li>
+              <li><i class="fas fa-check-circle"></i> 可躺平，有床墊與薄被</li>
+              <li><i class="fas fa-check-circle"></i> 基本冷氣與簡易空氣循環</li>
+              <li><i class="fas fa-check-circle"></i> 配備 10 吋螢幕與內建串流服務（Netflix & Disney+）</li>
             </ul>
             <a href="booking.html?cabin=standard" class="btn btn-primary">選擇 Standard Pod</a>
           </div>
         </div>
-        <div class="cabin-card">
+        <div class="cabin-card" data-cabin="luxury">
           <div class="cabin-image">
             <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800&auto=format&fit=crop" alt="Luxury Suite" />
+            <div class="cabin-size-indicator">適合任何身材</div>
           </div>
           <div class="cabin-content">
             <h3>Luxury Suite</h3>
             <p class="price">$299 起</p>
             <ul class="features-list">
-              <li>完全平躺艙＋LED 燈光調節</li>
-              <li>頂級靜音耳罩、按摩功能</li>
-              <li>配備 ChatGPT Plus 與 Spotify Premium</li>
+              <li><i class="fas fa-check-circle"></i> 完全平躺艙＋LED 燈光調節</li>
+              <li><i class="fas fa-check-circle"></i> 頂級靜音耳罩、按摩功能</li>
+              <li><i class="fas fa-check-circle"></i> 配備 ChatGPT Plus 與 Spotify Premium</li>
             </ul>
             <a href="booking.html?cabin=luxury" class="btn btn-outline">選擇 Luxury Suite</a>
           </div>
@@ -306,7 +326,11 @@
     <div class="container">
       <h2>準備好成為貨物了嗎？</h2>
       <p>開始你的沉浸式慢旅行</p>
-      <a href="booking.html" class="btn btn-large">立即預約</a>
+      <a href="booking.html" class="btn btn-large btn-primary">立即預約</a>
+      <div class="disclaimer-badge">
+        <i class="fas fa-gift"></i>
+        <span>首次預約享 95 折</span>
+      </div>
     </div>
   </section>
 
