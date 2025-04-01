@@ -400,28 +400,34 @@
         const height = parseInt(heightInput.value) || 0;
         const weight = parseInt(weightInput.value) || 0;
         
-        let recommendation = '請輸入身高體重';
+        const recommendationElem = document.getElementById('recommended-cabin');
         
         if (height > 0 && weight > 0) {
+          let recommendationText = '';
+          
           if (height < 165 && weight < 60) {
-            recommendation = '<span class="mini">Mini Box</span> (最省錢選擇)';
+            recommendationText = '<span class="mini">Mini Box</span> (最省錢選擇)';
             document.getElementById('cabin-mini').checked = true;
           } else if (height < 190 && weight < 100) {
-            recommendation = '<span class="standard">Standard Pod</span> (最熱門選擇)';
+            recommendationText = '<span class="standard">Standard Pod</span> (最熱門選擇)';
             document.getElementById('cabin-standard').checked = true;
           } else {
-            recommendation = '<span class="luxury">Luxury Suite</span> (最舒適選擇)';
+            recommendationText = '<span class="luxury">Luxury Suite</span> (最舒適選擇)';
             document.getElementById('cabin-luxury').checked = true;
           }
           
-          // 添加趣味動畫效果
-          document.querySelector('.cabin-recommendation').classList.add('pulse-animation');
-          setTimeout(() => {
-            document.querySelector('.cabin-recommendation').classList.remove('pulse-animation');
-          }, 1000);
+          recommendationElem.innerHTML = recommendationText;
+          
+          // 確保推薦區域始終有動畫效果
+          if (!document.querySelector('.cabin-recommendation').classList.contains('pulse-animation')) {
+            document.querySelector('.cabin-recommendation').classList.add('pulse-animation');
+          }
+          
+        } else {
+          recommendationElem.innerHTML = '請輸入身高體重';
+          // 移除動畫效果直到有有效輸入
+          document.querySelector('.cabin-recommendation').classList.remove('pulse-animation');
         }
-        
-        document.getElementById('recommended-cabin').innerHTML = recommendation;
         
         // 身體數據摘要更新
         if (height > 0 && weight > 0) {

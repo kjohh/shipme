@@ -9,6 +9,29 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* 增強頁面載入動畫 */
+    body {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .section-appear {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    
+    .section-appear.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -65,7 +88,7 @@
     </div>
   </section>
 
-  <section id="about" class="about">
+  <section id="about" class="about section-appear">
     <div class="container">
       <div class="section-header">
         <h2>關於 ShipMe™</h2>
@@ -100,7 +123,7 @@
     </div>
   </section>
 
-  <section id="how-it-works" class="how-it-works">
+  <section id="how-it-works" class="how-it-works section-appear">
     <div class="container">
       <div class="section-header">
         <h2>服務模式</h2>
@@ -139,7 +162,7 @@
     </div>
   </section>
 
-  <section id="cabins" class="cabins">
+  <section id="cabins" class="cabins section-appear">
     <div class="container">
       <div class="section-header">
         <h2>艙型介紹</h2>
@@ -199,7 +222,7 @@
     </div>
   </section>
 
-  <section class="tracking-demo">
+  <section class="tracking-demo section-appear">
     <div class="container">
       <div class="tracking-ui">
         <div class="section-header">
@@ -234,7 +257,7 @@
     </div>
   </section>
 
-  <section id="testimonials" class="testimonials">
+  <section id="testimonials" class="testimonials section-appear">
     <div class="container">
       <div class="section-header">
         <h2>用戶評價</h2>
@@ -275,7 +298,7 @@
     </div>
   </section>
 
-  <section id="faq" class="faq">
+  <section id="faq" class="faq section-appear">
     <div class="container">
       <div class="section-header">
         <h2>常見問題</h2>
@@ -288,7 +311,7 @@
             <span class="toggle-icon"><i class="fas fa-plus"></i></span>
           </div>
           <div class="faq-answer">
-            <p>每個艙體皆配備簡易乾燥式馬桶與尿袋，讓你安心放空不分心。</p>
+            <p>每個艙體皆配備簡易乾燥式馬桶與尿袋，讓你安心放空不分心。我們專利的「隔音排泄系統」確保你的旅行夥伴（其他貨物）不會察覺到任何異味或聲音。</p>
           </div>
         </div>
         <div class="faq-item">
@@ -297,7 +320,7 @@
             <span class="toggle-icon"><i class="fas fa-plus"></i></span>
           </div>
           <div class="faq-answer">
-            <p>目前僅限人類寄送，CatGo™ 將於 Q3 上線，敬請期待。</p>
+            <p>目前僅限人類寄送，CatGo™ 將於 Q3 上線，敬請期待。你的貓咪將享有專屬艙體，內建貓抓柱與自動逗貓器，讓寵物旅行更加舒適。</p>
           </div>
         </div>
         <div class="faq-item">
@@ -306,7 +329,7 @@
             <span class="toggle-icon"><i class="fas fa-plus"></i></span>
           </div>
           <div class="faq-answer">
-            <p>基於安全考量，艙門只能由收貨方或 ShipMe 員工解鎖，避免提早報關失敗。</p>
+            <p>基於安全考量，艙門只能由收貨方或 ShipMe 員工解鎖，避免提早報關失敗。不過，每個艙體均配備「緊急呼叫鈕」，如果你需要立即出艙，我們的工作人員會在 30 分鐘內到達（視貨物所在位置而定）。</p>
           </div>
         </div>
         <div class="faq-item">
@@ -315,14 +338,23 @@
             <span class="toggle-icon"><i class="fas fa-plus"></i></span>
           </div>
           <div class="faq-answer">
-            <p>Standard Pod 和 Luxury Suite 配備高效空氣循環系統，Mini Box 則建議每 4 小時打開通風口呼吸 10 分鐘。</p>
+            <p>Standard Pod 和 Luxury Suite 配備高效空氣循環系統，Mini Box 則建議每 4 小時打開通風口呼吸 10 分鐘。我們的艙體通過 ISO-84759 人類貨物空氣品質認證，確保你在旅程中能夠呼吸新鮮空氣。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>如果我有幽閉恐懼症怎麼辦？</h3>
+            <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            <p>我們建議幽閉恐懼症患者選擇 Luxury Suite，配備「無限空間VR體驗」，透過視覺模擬讓你身處於廣闊草原或海洋上，有效緩解幽閉感。若不確定，請先在我們的體驗中心試睡 2 小時。</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="cta">
+  <section class="cta section-appear">
     <div class="container">
       <h2>準備好成為貨物了嗎？</h2>
       <p>開始你的沉浸式慢旅行</p>
@@ -369,5 +401,37 @@
   </footer>
   
   <script src="js/script.js"></script>
+  <script>
+    // 頁面載入時的區塊淡入效果
+    document.addEventListener('DOMContentLoaded', function() {
+      const sectionAppear = document.querySelectorAll('.section-appear');
+      
+      function checkVisibility() {
+        sectionAppear.forEach(section => {
+          const sectionTop = section.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+          if (sectionTop < windowHeight - 100) {
+            section.classList.add('visible');
+          }
+        });
+      }
+      
+      // 初始檢查
+      setTimeout(checkVisibility, 100);
+      
+      // 滾動時檢查
+      window.addEventListener('scroll', checkVisibility);
+      
+      // 確保FAQ動畫持續有效
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        item.classList.add('section-appear');
+        setTimeout(() => {
+          item.classList.add('visible');
+        }, Math.random() * 500 + 300);
+      });
+    });
+  </script>
 </body>
 </html>

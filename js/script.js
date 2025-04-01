@@ -155,11 +155,6 @@ document.addEventListener('DOMContentLoaded', function() {
           recommendationElem.innerHTML = `<p class="recommendation-text">${recommendationText}</p>`;
           recommendationElem.classList.add('pulse-animation');
           
-          // 300毫秒後移除動畫類
-          setTimeout(() => {
-            recommendationElem.classList.remove('pulse-animation');
-          }, 300);
-          
           // 將推薦標籤添加到相應的艙型選項
           cabinOptions.forEach(cabin => {
             if (cabin.getAttribute('data-cabin') === recommendedCabin) {
