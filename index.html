@@ -49,6 +49,24 @@
       transform: none !important;
       display: grid !important;
     }
+    
+    /* 修復用戶評價區塊 */
+    #testimonials.section-appear {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+    
+    #testimonials .testimonial-card {
+      opacity: 1 !important;
+      transform: none !important;
+      visibility: visible !important;
+    }
+    
+    #testimonials .testimonial-cards {
+      opacity: 1 !important;
+      transform: none !important;
+      display: grid !important;
+    }
   </style>
 </head>
 <body>
@@ -275,7 +293,7 @@
     </div>
   </section>
 
-  <section id="testimonials" class="testimonials section-appear">
+  <section id="testimonials" class="testimonials section-appear visible">
     <div class="container">
       <div class="section-header">
         <h2>用戶評價</h2>
@@ -456,6 +474,17 @@
         cabinsSection.classList.add('visible');
         const cabinCards = cabinsSection.querySelectorAll('.cabin-card');
         cabinCards.forEach(card => {
+          card.style.opacity = '1';
+          card.style.transform = 'none';
+        });
+      }
+      
+      // 立即顯示用戶評價區塊
+      const testimonialsSection = document.getElementById('testimonials');
+      if (testimonialsSection) {
+        testimonialsSection.classList.add('visible');
+        const testimonialCards = testimonialsSection.querySelectorAll('.testimonial-card');
+        testimonialCards.forEach(card => {
           card.style.opacity = '1';
           card.style.transform = 'none';
         });

@@ -370,4 +370,20 @@ document.addEventListener('DOMContentLoaded', function() {
       card.classList.add('scrolled');
     });
   }
+  
+  // 用戶評價區塊顯示修復
+  const testimonialsSection = document.getElementById('testimonials');
+  const testimonialCards = document.querySelectorAll('.testimonial-card');
+  
+  if (testimonialsSection) {
+    testimonialsSection.style.opacity = '1';
+    testimonialsSection.style.transform = 'translateY(0)';
+    testimonialsSection.classList.add('visible');
+    
+    testimonialCards.forEach(card => {
+      card.style.opacity = '1';
+      card.style.transform = 'none';
+      card.classList.add('scrolled');
+    });
+  }
 }); 

@@ -2519,3 +2519,21 @@ input[type="checkbox"] {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
+
+/* 確保用戶評價區塊正確顯示 */
+#testimonials.section-appear {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+#testimonials .testimonial-card {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+#testimonials .testimonial-cards {
+  opacity: 1 !important;
+  transform: none !important;
+  display: grid !important;
+}
