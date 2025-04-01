@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>預約成功 - ShipMe™</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="complete-page">
+  <header>
+    <nav class="container">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="https://images.unsplash.com/photo-1633409361618-c73427e4e206?q=80&w=200&auto=format&fit=crop" alt="ShipMe Logo" class="logo" />
+          <span class="logo-text">ShipMe™</span>
+        </a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html#about">關於我們</a>
+        <a href="index.html#how-it-works">運作方式</a>
+        <a href="index.html#cabins">艙型</a>
+        <a href="index.html#testimonials">使用評價</a>
+        <a href="index.html#faq">常見問題</a>
+        <a href="booking.html" class="btn-nav">立即預約</a>
+      </div>
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <section class="complete-hero">
+    <div class="container">
+      <div class="confetti-animation">
+        <i class="fas fa-shipping-fast animated"></i>
+        <div class="confetti"></div>
+      </div>
+      <h1>恭喜！你已成功預約愚人節特別行程！</h1>
+      <p class="tagline">你即將成為 ShipMe™ 的第 <span class="counter">1,337</span> 位幸運貨物！</p>
+    </div>
+  </section>
+
+  <section class="booking-summary">
+    <div class="container">
+      <div class="summary-card">
+        <div class="summary-header">
+          <h2><i class="fas fa-clipboard-check"></i> 訂單詳情</h2>
+          <span class="booking-id">訂單號碼：AF-20250401-<span id="random-id">XYZ</span></span>
+        </div>
+        
+        <div class="summary-body">
+          <div class="summary-section">
+            <h3>你的艙型</h3>
+            <div class="cabin-summary" id="cabin-display">
+              <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=400&auto=format&fit=crop" alt="Standard Pod" />
+              <div class="cabin-info">
+                <h4>Standard Pod</h4>
+                <p>$129 起</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="summary-section">
+            <h3>你的行程</h3>
+            <div class="route-summary">
+              <div class="route-point">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="location">
+                  <h4>出發地</h4>
+                  <p id="origin-display">台北</p>
+                </div>
+              </div>
+              <div class="route-line">
+                <i class="fas fa-ship"></i>
+              </div>
+              <div class="route-point">
+                <i class="fas fa-flag-checkered"></i>
+                <div class="location">
+                  <h4>目的地</h4>
+                  <p id="destination-display">紐約</p>
+                </div>
+              </div>
+            </div>
+            <div class="shipping-details">
+              <div class="shipping-method">
+                <h4>運送方式</h4>
+                <p id="shipping-method-display">海運 (14-30 天)</p>
+              </div>
+              <div class="departure-date">
+                <h4>出發日期</h4>
+                <p id="departure-date-display">2025 年 4 月 1 日</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="summary-section">
+            <h3>你的行李艙位</h3>
+            <div class="cargo-info">
+              <div class="cargo-detail">
+                <i class="fas fa-box"></i>
+                <span>貨物分類：</span>
+                <strong>人類貨物（特殊處理）</strong>
+              </div>
+              <div class="cargo-detail">
+                <i class="fas fa-barcode"></i>
+                <span>貨運追蹤碼：</span>
+                <strong id="tracking-code">HUMN-20250401-<span id="random-track">12345</span></strong>
+              </div>
+              <div class="cargo-detail">
+                <i class="fas fa-tag"></i>
+                <span>特殊標記：</span>
+                <strong>易碎品、保持乾燥、此面朝上</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="april-fools-reveal">
+          <div class="reveal-banner">
+            <i class="fas fa-laugh-squint"></i>
+            <h3>愚人節快樂！</h3>
+            <i class="fas fa-laugh-squint"></i>
+          </div>
+          <p>這是一個愚人節惡搞網站，人類目前還不能被當成貨物運送（感謝老天）。</p>
+          <p>如果你真的想出國旅行，建議你還是乖乖買機票、訂飯店，或者考慮其他實際存在的交通方式。</p>
+          <p>別擔心，我們沒有記錄你的任何個人資料。網站所有表單都是靜態的，沒有後端系統。</p>
+          <div class="share-section">
+            <p>喜歡這個概念嗎？分享給你的朋友，讓他們也體驗一下被「寄送」的感覺！</p>
+            <div class="social-share">
+              <a href="#" class="share-btn"><i class="fab fa-facebook"></i> 分享</a>
+              <a href="#" class="share-btn"><i class="fab fa-twitter"></i> 推文</a>
+              <a href="#" class="share-btn"><i class="fab fa-line"></i> LINE</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="summary-footer">
+          <a href="index.html" class="btn btn-secondary">返回首頁</a>
+          <a href="#" class="btn btn-primary" id="download-btn">下載訂單確認函</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fake-recommendations">
+    <div class="container">
+      <h2>其他人也預訂了這些</h2>
+      <div class="fake-products">
+        <div class="fake-product">
+          <img src="https://images.unsplash.com/photo-1595079676339-1534801ad6cf?q=80&w=300&auto=format&fit=crop" alt="寵物運送服務" />
+          <h3>CatGo™ 寵物運送服務</h3>
+          <p>讓你的貓咪也享受貨運旅行的樂趣</p>
+          <a href="#" class="btn btn-outline disabled">即將推出</a>
+        </div>
+        <div class="fake-product">
+          <img src="https://images.unsplash.com/photo-1595079676077-d129b3d15796?q=80&w=300&auto=format&fit=crop" alt="豪華家具運送" />
+          <h3>攜帶式豪華家具套組</h3>
+          <p>讓你的貨櫃感覺就像家一樣</p>
+          <a href="#" class="btn btn-outline disabled">缺貨中</a>
+        </div>
+        <div class="fake-product">
+          <img src="https://images.unsplash.com/photo-1582845512747-e42001c95638?q=80&w=300&auto=format&fit=crop" alt="高級餐點服務" />
+          <h3>貨運艙高級餐點服務</h3>
+          <p>在貨櫃中享用米其林星級料理</p>
+          <a href="#" class="btn btn-outline disabled">即將推出</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="https://images.unsplash.com/photo-1633409361618-c73427e4e206?q=80&w=200&auto=format&fit=crop" alt="ShipMe Logo" class="logo" />
+          <span>ShipMe™</span>
+        </div>
+        <div class="footer-links">
+          <div class="link-group">
+            <h4>服務</h4>
+            <a href="index.html#cabins">艙型介紹</a>
+            <a href="index.html#how-it-works">運作方式</a>
+            <a href="index.html#testimonials">用戶評價</a>
+          </div>
+          <div class="link-group">
+            <h4>幫助</h4>
+            <a href="index.html#faq">常見問題</a>
+            <a href="#">聯繫我們</a>
+            <a href="#">隱私政策</a>
+          </div>
+          <div class="link-group">
+            <h4>社交媒體</h4>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+          </div>
+        </div>
+      </div>
+      <div class="disclaimer">
+        <p>© 2025 ShipMe™ 貨運旅行平台 ｜此網站僅為愚人節惡搞專案，請勿真的嘗試將人類以貨物方式運送</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 生成隨機訂單號和追蹤碼
+      const randomId = Math.floor(Math.random() * 90000) + 10000;
+      const randomTrack = Math.floor(Math.random() * 90000) + 10000;
+      document.getElementById('random-id').textContent = randomId;
+      document.getElementById('random-track').textContent = randomTrack;
+      
+      // 從 URL 參數讀取預訂信息（模擬）
+      const urlParams = new URLSearchParams(window.location.search);
+      const cabinType = urlParams.get('cabin') || 'standard';
+      
+      // 根據艙型更新顯示
+      if (cabinType === 'mini') {
+        document.getElementById('cabin-display').innerHTML = `
+          <img src="https://images.unsplash.com/photo-1520277739336-7bf67edfa768?q=80&w=400&auto=format&fit=crop" alt="Mini Box" />
+          <div class="cabin-info">
+            <h4>Mini Box</h4>
+            <p>$49 起</p>
+          </div>
+        `;
+      } else if (cabinType === 'luxury') {
+        document.getElementById('cabin-display').innerHTML = `
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=400&auto=format&fit=crop" alt="Luxury Suite" />
+          <div class="cabin-info">
+            <h4>Luxury Suite</h4>
+            <p>$299 起</p>
+          </div>
+        `;
+      }
+      
+      // 下載按鈕愚人節彩蛋
+      document.getElementById('download-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('愚人節快樂！這是個玩笑網站，沒有真的訂單確認函哦! 😉');
+      });
+      
+      // 隨機選擇出發地和目的地（模擬）
+      const origins = ['台北', '高雄', '香港', '東京', '新加坡'];
+      const destinations = ['紐約', '倫敦', '巴黎', '雪梨', '杜拜', '曼谷'];
+      const shippingMethods = ['海運 (14-30 天)', '陸運 (7-15 天)', '空運 (2-4 天)'];
+      
+      // 如果 URL 沒有指定，則使用隨機值
+      const origin = urlParams.get('origin') || origins[Math.floor(Math.random() * origins.length)];
+      const destination = urlParams.get('destination') || destinations[Math.floor(Math.random() * destinations.length)];
+      const shippingMethod = urlParams.get('shipping') || shippingMethods[Math.floor(Math.random() * shippingMethods.length)];
+      
+      document.getElementById('origin-display').textContent = origin;
+      document.getElementById('destination-display').textContent = destination;
+      document.getElementById('shipping-method-display').textContent = shippingMethod;
+      
+      // 設定出發日期為明年的愚人節
+      const today = new Date();
+      const nextYear = today.getFullYear() + 1;
+      document.getElementById('departure-date-display').textContent = nextYear + ' 年 4 月 1 日';
+      
+      // 計數器動畫
+      const counter = document.querySelector('.counter');
+      let count = 0;
+      const targetCount = 1337;
+      const duration = 2000; // 2秒完成計數
+      const step = targetCount / (duration / 16); // 假設 60fps
+      
+      function updateCounter() {
+        count += step;
+        if (count >= targetCount) {
+          count = targetCount;
+          clearInterval(interval);
+        }
+        counter.textContent = Math.floor(count).toLocaleString();
+      }
+      
+      const interval = setInterval(updateCounter, 16);
+    });
+  </script>
+</body>
+</html> 

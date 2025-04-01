@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>預約你的 ShipMe™ 旅程</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="booking-page">
+  <header>
+    <nav class="container">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="https://images.unsplash.com/photo-1633409361618-c73427e4e206?q=80&w=200&auto=format&fit=crop" alt="ShipMe Logo" class="logo" />
+          <span class="logo-text">ShipMe™</span>
+        </a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html#about">關於我們</a>
+        <a href="index.html#how-it-works">運作方式</a>
+        <a href="index.html#cabins">艙型</a>
+        <a href="index.html#testimonials">使用評價</a>
+        <a href="index.html#faq">常見問題</a>
+        <a href="booking.html" class="btn-nav active">立即預約</a>
+      </div>
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <section class="booking-header">
+    <div class="container">
+      <h1>預約你的貨運旅程</h1>
+      <p>只需三個簡單步驟，開啟你的沉浸式旅行</p>
+    </div>
+  </section>
+
+  <section class="booking-steps">
+    <div class="container">
+      <div class="step-indicators">
+        <div class="step-indicator active" id="step-1-indicator">
+          <div class="step-number">1</div>
+          <div class="step-label">選擇艙型</div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-indicator" id="step-2-indicator">
+          <div class="step-number">2</div>
+          <div class="step-label">選擇目的地</div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-indicator" id="step-3-indicator">
+          <div class="step-number">3</div>
+          <div class="step-label">個人資料</div>
+        </div>
+      </div>
+
+      <div class="booking-forms">
+        <!-- 步驟 1: 選擇艙型 -->
+        <div class="booking-form active" id="step-1">
+          <h2>選擇你的艙型</h2>
+          <p>根據你的預算和舒適需求，選擇最適合你的人類運輸艙</p>
+          
+          <div class="cabin-selection">
+            <div class="cabin-option" data-cabin="mini">
+              <div class="cabin-image">
+                <img src="https://images.unsplash.com/photo-1520277739336-7bf67edfa768?q=80&w=800&auto=format&fit=crop" alt="Mini Box" />
+              </div>
+              <div class="cabin-details">
+                <h3>Mini Box</h3>
+                <p class="price">$49 起</p>
+                <ul class="features">
+                  <li><i class="fas fa-box"></i> 空間與大型貓籠相仿</li>
+                  <li><i class="fas fa-water"></i> 附送塑膠水瓶與能量棒</li>
+                  <li><i class="fas fa-book"></i> 隨機紙本書一本</li>
+                </ul>
+                <div class="cabin-option-select">
+                  <input type="radio" name="cabin-type" id="cabin-mini" value="mini">
+                  <label for="cabin-mini">選擇 Mini Box</label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="cabin-option recommended" data-cabin="standard">
+              <div class="recommended-tag">推薦</div>
+              <div class="cabin-image">
+                <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800&auto=format&fit=crop" alt="Standard Pod" />
+              </div>
+              <div class="cabin-details">
+                <h3>Standard Pod</h3>
+                <p class="price">$129 起</p>
+                <ul class="features">
+                  <li><i class="fas fa-bed"></i> Le平躺空間，附床墊與薄被</li>
+                  <li><i class="fas fa-fan"></i> 基本冷氣與簡易空氣循環</li>
+                  <li><i class="fas fa-tv"></i> 10 吋螢幕與串流服務</li>
+                </ul>
+                <div class="cabin-option-select">
+                  <input type="radio" name="cabin-type" id="cabin-standard" value="standard" checked>
+                  <label for="cabin-standard">選擇 Standard Pod</label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="cabin-option" data-cabin="luxury">
+              <div class="cabin-image">
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800&auto=format&fit=crop" alt="Luxury Suite" />
+              </div>
+              <div class="cabin-details">
+                <h3>Luxury Suite</h3>
+                <p class="price">$299 起</p>
+                <ul class="features">
+                  <li><i class="fas fa-couch"></i> 完全平躺艙＋LED 燈光調節</li>
+                  <li><i class="fas fa-headphones"></i> 頂級靜音耳罩、按摩功能</li>
+                  <li><i class="fas fa-robot"></i> ChatGPT Plus 與 Spotify Premium</li>
+                </ul>
+                <div class="cabin-option-select">
+                  <input type="radio" name="cabin-type" id="cabin-luxury" value="luxury">
+                  <label for="cabin-luxury">選擇 Luxury Suite</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-navigation">
+            <button class="btn btn-secondary" onclick="window.location.href='index.html'">返回首頁</button>
+            <button class="btn btn-primary next-step" data-next="step-2">下一步：選擇目的地</button>
+          </div>
+        </div>
+        
+        <!-- 步驟 2: 選擇目的地 -->
+        <div class="booking-form" id="step-2">
+          <h2>選擇你的目的地與運輸方式</h2>
+          <p>告訴我們你想被寄送到哪裡，以及你偏好的運輸方式</p>
+          
+          <div class="destination-form">
+            <div class="form-group">
+              <label for="origin">出發地</label>
+              <select id="origin" required>
+                <option value="" disabled selected>請選擇出發地</option>
+                <option value="taipei">台北</option>
+                <option value="kaohsiung">高雄</option>
+                <option value="hong_kong">香港</option>
+                <option value="tokyo">東京</option>
+                <option value="singapore">新加坡</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="destination">目的地</label>
+              <select id="destination" required>
+                <option value="" disabled selected>請選擇目的地</option>
+                <option value="new_york">紐約</option>
+                <option value="london">倫敦</option>
+                <option value="paris">巴黎</option>
+                <option value="sydney">雪梨</option>
+                <option value="dubai">杜拜</option>
+                <option value="bangkok">曼谷</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label>運輸方式</label>
+              <div class="shipping-options">
+                <div class="shipping-option">
+                  <input type="radio" name="shipping-method" id="shipping-sea" value="sea" checked>
+                  <label for="shipping-sea"><i class="fas fa-ship"></i> 海運 (14-30 天)</label>
+                  <p class="shipping-description">最環保、最安靜的選擇。十分適合社恐族。</p>
+                </div>
+                
+                <div class="shipping-option">
+                  <input type="radio" name="shipping-method" id="shipping-land" value="land">
+                  <label for="shipping-land"><i class="fas fa-truck"></i> 陸運 (7-15 天)</label>
+                  <p class="shipping-description">平穩的路途，中等運送時間。</p>
+                </div>
+                
+                <div class="shipping-option">
+                  <input type="radio" name="shipping-method" id="shipping-air" value="air">
+                  <label for="shipping-air"><i class="fas fa-plane"></i> 空運 (2-4 天)</label>
+                  <p class="shipping-description">最快的選擇，但較為顛簸且較貴。</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="departure-date">出發日期</label>
+              <input type="date" id="departure-date" required min="2025-04-01">
+            </div>
+          </div>
+          
+          <div class="form-navigation">
+            <button class="btn btn-secondary prev-step" data-prev="step-1">返回上一步</button>
+            <button class="btn btn-primary next-step" data-next="step-3">下一步：個人資料</button>
+          </div>
+        </div>
+        
+        <!-- 步驟 3: 個人資料 -->
+        <div class="booking-form" id="step-3">
+          <h2>填寫個人資料</h2>
+          <p>我們需要一些基本資料來安排你的貨運</p>
+          
+          <div class="personal-form">
+            <div class="form-group">
+              <label for="fullname">全名</label>
+              <input type="text" id="fullname" placeholder="請輸入你的全名" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">電子郵件</label>
+              <input type="email" id="email" placeholder="example@email.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">手機號碼</label>
+              <input type="tel" id="phone" placeholder="0912345678" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="weight">體重 (kg)</label>
+              <input type="number" id="weight" placeholder="運費會根據重量計算" min="30" max="150" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="height">身高 (cm)</label>
+              <input type="number" id="height" placeholder="確保艙體適合你" min="120" max="200" required>
+            </div>
+            
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="terms" required>
+              <label for="terms">我已閱讀並同意 ShipMe™ 的<a href="#">服務條款</a>與<a href="#">隱私政策</a></label>
+            </div>
+            
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="acknowledgment" required>
+              <label for="acknowledgment">我確認這是愚人節惡搞網站，人類無法真的被當貨物寄送</label>
+            </div>
+          </div>
+          
+          <div class="form-navigation">
+            <button class="btn btn-secondary prev-step" data-prev="step-2">返回上一步</button>
+            <button class="btn btn-primary" id="submit-booking">完成預約</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-badges">
+    <div class="container">
+      <div class="badge-wrapper">
+        <div class="trust-badge">
+          <i class="fas fa-shield-alt"></i>
+          <p>100% 安全預約</p>
+        </div>
+        <div class="trust-badge">
+          <i class="fas fa-thumbs-up"></i>
+          <p>愚人節保證</p>
+        </div>
+        <div class="trust-badge">
+          <i class="fas fa-laugh-wink"></i>
+          <p>幽默感推薦</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="https://images.unsplash.com/photo-1633409361618-c73427e4e206?q=80&w=200&auto=format&fit=crop" alt="ShipMe Logo" class="logo" />
+          <span>ShipMe™</span>
+        </div>
+        <div class="footer-links">
+          <div class="link-group">
+            <h4>服務</h4>
+            <a href="index.html#cabins">艙型介紹</a>
+            <a href="index.html#how-it-works">運作方式</a>
+            <a href="index.html#testimonials">用戶評價</a>
+          </div>
+          <div class="link-group">
+            <h4>幫助</h4>
+            <a href="index.html#faq">常見問題</a>
+            <a href="#">聯繫我們</a>
+            <a href="#">隱私政策</a>
+          </div>
+          <div class="link-group">
+            <h4>社交媒體</h4>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+          </div>
+        </div>
+      </div>
+      <div class="disclaimer">
+        <p>© 2025 ShipMe™ 貨運旅行平台 ｜此網站僅為愚人節惡搞專案，請勿真的嘗試將人類以貨物方式運送</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    // 預約表單流程控制
+    document.addEventListener('DOMContentLoaded', function() {
+      // 獲取 URL 參數來設定預選艙型
+      const urlParams = new URLSearchParams(window.location.search);
+      const cabinParam = urlParams.get('cabin');
+      if (cabinParam) {
+        const cabinRadio = document.getElementById('cabin-' + cabinParam);
+        if (cabinRadio) cabinRadio.checked = true;
+      }
+      
+      // 下一步按鈕
+      const nextButtons = document.querySelectorAll('.next-step');
+      nextButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const currentStep = button.closest('.booking-form');
+          const nextStepId = button.getAttribute('data-next');
+          const nextStep = document.getElementById(nextStepId);
+          
+          currentStep.classList.remove('active');
+          nextStep.classList.add('active');
+          
+          // 更新步驟指示器
+          document.getElementById(currentStep.id + '-indicator').classList.remove('active');
+          document.getElementById(nextStepId + '-indicator').classList.add('active');
+          
+          // 滾動到頂部
+          window.scrollTo(0, 0);
+        });
+      });
+      
+      // 上一步按鈕
+      const prevButtons = document.querySelectorAll('.prev-step');
+      prevButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const currentStep = button.closest('.booking-form');
+          const prevStepId = button.getAttribute('data-prev');
+          const prevStep = document.getElementById(prevStepId);
+          
+          currentStep.classList.remove('active');
+          prevStep.classList.add('active');
+          
+          // 更新步驟指示器
+          document.getElementById(currentStep.id + '-indicator').classList.remove('active');
+          document.getElementById(prevStepId + '-indicator').classList.add('active');
+          
+          // 滾動到頂部
+          window.scrollTo(0, 0);
+        });
+      });
+      
+      // 提交按鈕
+      document.getElementById('submit-booking').addEventListener('click', function() {
+        // 檢查表單有效性（簡單版）
+        const requiredFields = document.querySelectorAll('#step-3 input[required]');
+        let isValid = true;
+        
+        requiredFields.forEach(field => {
+          if (!field.value) {
+            isValid = false;
+            field.classList.add('error');
+          } else {
+            field.classList.remove('error');
+          }
+        });
+        
+        if (isValid) {
+          window.location.href = 'booking-complete.html';
+        } else {
+          alert('請填寫所有必要欄位');
+        }
+      });
+    });
+  </script>
+</body>
+</html> 
