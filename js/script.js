@@ -152,8 +152,15 @@ document.addEventListener('DOMContentLoaded', function() {
             cabinClass = 'luxury';
           }
           
+          // 確保推薦元素可見且設置合適的透明度
+          recommendationElem.style.opacity = '1';
+          recommendationElem.style.visibility = 'visible';
           recommendationElem.innerHTML = `<p class="recommendation-text">${recommendationText}</p>`;
-          recommendationElem.classList.add('pulse-animation');
+          
+          // 使用更溫和的動畫效果
+          if (!recommendationElem.classList.contains('pulse-animation')) {
+            recommendationElem.classList.add('pulse-animation');
+          }
           
           // 將推薦標籤添加到相應的艙型選項
           cabinOptions.forEach(cabin => {
@@ -171,14 +178,27 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         // 如果沒有輸入足夠的數據，顯示提示
         if (recommendationElem) {
+          // 確保可見性
+          recommendationElem.style.opacity = '1';
+          recommendationElem.style.visibility = 'visible';
           recommendationElem.innerHTML = '<p class="recommendation-text">請輸入您的身高和體重以獲取艙型推薦</p>';
+          recommendationElem.classList.remove('pulse-animation');
         }
       }
     };
     
-    // 為輸入添加事件監聽器
-    heightInput.addEventListener('input', updateCabinRecommendation);
-    weightInput.addEventListener('input', updateCabinRecommendation);
+    // 為輸入添加事件監聽器，使用延遲處理減少頻繁更新
+    let inputTimeout;
+    
+    heightInput.addEventListener('input', function() {
+      clearTimeout(inputTimeout);
+      inputTimeout = setTimeout(updateCabinRecommendation, 100);
+    });
+    
+    weightInput.addEventListener('input', function() {
+      clearTimeout(inputTimeout);
+      inputTimeout = setTimeout(updateCabinRecommendation, 100);
+    });
     
     // 初始化推薦
     updateCabinRecommendation();
