@@ -354,4 +354,20 @@ document.addEventListener('DOMContentLoaded', function() {
   buttons.forEach(button => {
     button.addEventListener('click', createRippleEffect);
   });
+
+  // 艙型區塊顯示修復
+  const cabinsSection = document.getElementById('cabins');
+  const cabinCards = document.querySelectorAll('.cabin-card');
+  
+  if (cabinsSection) {
+    cabinsSection.style.opacity = '1';
+    cabinsSection.style.transform = 'translateY(0)';
+    cabinsSection.classList.add('visible');
+    
+    cabinCards.forEach(card => {
+      card.style.opacity = '1';
+      card.style.transform = 'none';
+      card.classList.add('scrolled');
+    });
+  }
 }); 

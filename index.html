@@ -31,6 +31,24 @@
       opacity: 1;
       transform: translateY(0);
     }
+    
+    /* 修復艙型介紹區塊 */
+    #cabins.section-appear {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+    
+    #cabins .cabin-card {
+      opacity: 1 !important;
+      transform: none !important;
+      visibility: visible !important;
+    }
+    
+    #cabins .cabin-cards {
+      opacity: 1 !important;
+      transform: none !important;
+      display: grid !important;
+    }
   </style>
 </head>
 <body>
@@ -162,7 +180,7 @@
     </div>
   </section>
 
-  <section id="cabins" class="cabins section-appear">
+  <section id="cabins" class="cabins section-appear visible">
     <div class="container">
       <div class="section-header">
         <h2>艙型介紹</h2>
@@ -431,6 +449,17 @@
           item.classList.add('visible');
         }, Math.random() * 500 + 300);
       });
+      
+      // 立即顯示艙型介紹區塊
+      const cabinsSection = document.getElementById('cabins');
+      if (cabinsSection) {
+        cabinsSection.classList.add('visible');
+        const cabinCards = cabinsSection.querySelectorAll('.cabin-card');
+        cabinCards.forEach(card => {
+          card.style.opacity = '1';
+          card.style.transform = 'none';
+        });
+      }
     });
   </script>
 </body>

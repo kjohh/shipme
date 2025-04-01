@@ -752,6 +752,8 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2.5rem;
   margin-top: 3rem;
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 .cabin-card {
@@ -763,6 +765,8 @@ nav {
   position: relative;
   transform-style: preserve-3d;
   transform: perspective(1000px) rotateY(0) translateZ(0);
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 .cabin-card:hover {
@@ -2489,4 +2493,29 @@ input[type="checkbox"] {
 
 .joke-reveal i.fa-heart {
   color: #f44336;
+}
+
+/* 修復艙型介紹區塊 */
+.cabin-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.cabin-card {
+  opacity: 1 !important;
+  transform: perspective(1000px) rotateY(0) translateZ(0) !important;
+}
+
+.section-appear {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+#cabins.section-appear {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
