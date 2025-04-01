@@ -196,7 +196,7 @@ p {
 .btn-nav {
   background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
   color: var(--white);
-  padding: 0.7rem 1.4rem;
+  padding: 0.7rem 1.4rem!important;
   border-radius: 50px;
   box-shadow: 0 4px 10px rgba(21, 101, 192, 0.3);
 }
@@ -219,6 +219,7 @@ header {
   top: 0;
   z-index: 1000;
   transition: var(--transition);
+  padding: 16px 0;
 }
 
 header.scrolled {
@@ -272,6 +273,10 @@ nav {
   font-weight: 500;
   position: relative;
   padding: 0.5rem 0;
+}
+
+.nav-links a.btn-nav {
+  color: var(--white);
 }
 
 .nav-links a::after {
@@ -1112,6 +1117,12 @@ nav {
   color: var(--white);
 }
 
+.cta .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .cta h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -1127,7 +1138,7 @@ nav {
 
 .cta .btn {
   background-color: var(--white);
-  color: var(--primary-color);
+  color: var(--white);
 }
 
 .cta .btn:hover {
